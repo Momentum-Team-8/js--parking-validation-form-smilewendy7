@@ -1,17 +1,24 @@
 console.log('Add validation!');
 
-//car year must be a number 
-
-// let carYear = document.querySelector('# car-year')
-
-    // car year must be after 1990
+//CVV must be a 3 digits number
 
 
-//number of days must be a number
+let form = document.querySelector("#parking-form"); 
 
-// number of days must be between 1 and 30 
+let formIsValid;
+
+// test for input --- log 
+// form.addEventListener('input', event=> {
+//     console.log('user input captred!')
+// })
+
+form.addEventListener('submit', event=>{
+    event.PreventDefault()
+    
 
 
 
+}
+)
 
 
