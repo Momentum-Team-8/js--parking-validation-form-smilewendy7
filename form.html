@@ -18,7 +18,7 @@
       <form id="parking-form">
         <div class="input-field" id="name-field">
           <label for="name">Name</label>
-          
+
           <!-- add required -->
           <input id="name" type="text" required>
         </div>
@@ -27,8 +27,9 @@
           <div class="input-group">
 
             <!-- add required  -->
-            <input id="car-year" type="text" placeholder="Year" required >
-            <input id="car-make" type="text" placeholder="Make" required>
+            <!-- car year change to number does not show allert-->
+            <input id="car-year" type="number" placeholder="Year" min = "1990" required >
+            <input id="car-make" type="text" placeholder="Make" required min> 
             <input id="car-model" type="text" placeholder="Model" required>
           </div>
         </div>
@@ -41,7 +42,8 @@
           <label for="days">Number of days</label>
 
           <!-- add required -->
-          <input id="days" type="text" required>
+          <!-- number of days must be number; 1-30 -->
+          <input id="days" type="number" min = "1" max = "30" required>
         </div>
         <div class="input-field" id="credit-card-field">
           <label for="credit-card">Credit Card</label>
