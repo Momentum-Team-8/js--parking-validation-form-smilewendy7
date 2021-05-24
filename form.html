@@ -4,13 +4,6 @@
     <meta charset="utf-8">
     <title>Form Validation</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-
-
-
-
-
-
   </head>
   <body>
     <div class="container">
@@ -18,55 +11,39 @@
       <form id="parking-form">
         <div class="input-field" id="name-field">
           <label for="name">Name</label>
-
-          <!-- add required -->
-          <input id="name" type="text" required>
+          <input id="name" type="text">
         </div>
         <div class="input-field" id="car-field">
           <label for="car-year">Car</label>
           <div class="input-group">
-
-            <!-- add required  -->
-            <!-- car year change to number does not show allert-->
-            <input id="car-year" type="number" placeholder="Year" min = "1990" required >
-            <input id="car-make" type="text" placeholder="Make" required min> 
-            <input id="car-model" type="text" placeholder="Model" required>
+            <input id="car-year" type="text" placeholder="Year">
+            <input id="car-make" type="text" placeholder="Make">
+            <input id="car-model" type="text" placeholder="Model">
           </div>
         </div>
         <div class="input-field" id="start-date-field">
           <label for="start-date">Date parking</label>
-          <!-- add required -->
-          <input id="start-date" type="date" required>
+          <input id="start-date" type="date">
         </div>
         <div class="input-field" id="days-field">
           <label for="days">Number of days</label>
-
-          <!-- add required -->
-          <!-- number of days must be number; 1-30 -->
-          <input id="days" type="number" min = "1" max = "30" required>
+          <input id="days" type="text">
         </div>
         <div class="input-field" id="credit-card-field">
           <label for="credit-card">Credit Card</label>
-
-          <!-- add required -->
-          <input id="credit-card" type="text" required>
+          <input id="credit-card" type="text">
         </div>
         <div class="row">
           <div class="col">
             <div class="input-field" id="cvv-field">
               <label for="cvv">CVV</label>
-
-              <!-- add required -->
-              <!-- cvv -- number, 3 digits -->
-              <input id="cvv" type="text" required pattern = "[0-9]{3}">
+              <input id="cvv" type="text">
             </div>
           </div>
           <div class="col">
             <div class="input-field" id="expiration-field">
               <label for="expiration">Expiration</label>
-
-              <!-- add required -->
-              <input id="expiration" type="text" placeholder="MM/YY" required>
+              <input id="expiration" type="text" placeholder="MM/YY">
             </div>
           </div>
         </div>
@@ -75,6 +52,6 @@
         </div>
       </form>
       <div id="total"></div>
-      
+      <script src="script.js"></script>
   </body>
 </html>

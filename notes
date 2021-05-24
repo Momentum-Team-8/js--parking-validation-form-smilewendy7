@@ -1,0 +1,151 @@
+// console.log('Add validation!');
+
+
+
+//grab elements from the DOM .... 
+let form = document.querySelector("#parking-form"); 
+
+let formIsValid;
+
+// let total = document.querySelector("#total"); 
+
+let error = document.createElement("div")
+
+
+// #### 
+
+
+/ form.addEventListener('submit', function (event) {
+
+    
+        event.preventDefault()
+    
+        validateInput()
+    
+        // validateCardNumber();
+    
+        // if (formIsValid){
+    
+        //     document.querySelector("#total").innerHTML = "The cost is $5 per day"
+        }
+    
+    })
+
+
+// validate name 
+
+const nameInput = document.querySelector('#name-field')
+
+form.addEventListener('input', function(event){
+
+    // console.log('user input captured!')
+
+})
+
+function validateInput() {
+    if (nameInput.value === undefined) {
+           console.log('input invalid')
+           formIsValid = false
+           document.querySelector('#name-field').classList.add('input-invalid')
+           document.querySelector('#name-field').appendChild(error).innerHTML = "This field is required. "
+       }
+    }
+
+
+
+
+// test for input --- log 
+// form.addEventListener('input', event=> {
+//     console.log('user input captred!')
+// })
+
+
+
+//show the user toal cost is 5 div total
+// --- "the cost is 5 dollar perday"  if the form is valid
+
+
+
+
+
+
+
+
+/
+
+
+//*car field 
+    // click submit ... 
+
+form.addEventListener('submit', function (event) {
+    // prevent submit 
+    event.preventDefault(); 
+
+    var inputs = form.getElementsByTagName("input"), input = null, not_pass= false; 
+
+    for(var i = 0, len = inputs.length; i<len; i++ ){
+
+        input = inputs[i]
+
+        // if(input.type == "text" && !input.checked) {
+        //     not_pass = true; 
+        // } 
+
+        // if(input.type == "text" && input.checked) {
+        //     not_pass = false; 
+        // } 
+
+        if(input.type == "text" && !input.value) {
+            not_pass = true; 
+        } 
+
+        if(input.type == "text" && input.value) {
+            formIsValid = false; 
+        } 
+    }
+
+
+    if(not_pass) { 
+
+        document.querySelector('#name-field').classList.add('input-invalid')
+        document.querySelector('#name-field').appendChild(error).innerHTML = "This field is required. "
+        return false;  
+
+    }  else {
+        //do something here
+    }
+
+})
+
+
+
+// #6 valid credit card number
+
+// function validateCardNumber(number) {
+//     let regex = new RegExp("^[0-9]{16}$");
+//     if (!regex.test(number))
+//         return false;
+
+//     return luhnCheck(number); formIsValid =  TRUE;
+
+// }
+
+
+
+
+
+
+// function luhnCheck(val) {
+//     var sum = 0;
+//     for (var i = 0; i < val.length; i++) {
+//         var intVal = parseInt(val.substr(i, 1));
+//         if (i % 2 == 0) {
+//             intVal *= 2;
+//             if (intVal > 9) {
+//                 intVal = 1 + (intVal % 10);
+//             }
+//         }
+//         sum += intVal;
+//     }
+//     return (sum % 10) == 0;
+// }
