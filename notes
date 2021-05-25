@@ -149,3 +149,36 @@ form.addEventListener('submit', function (event) {
 //     }
 //     return (sum % 10) == 0;
 // }
+
+
+
+function validateInput_exp() {
+            const expInput = document.querySelector('#expiration-field');
+
+            var regex = new RegExp("^(0[1-9]|1[0-2])\/?([0-9]{4})$")
+            
+            if(!regex.test(expInput.value))
+            //{1,2} 1 to 2 numbers
+            { return false
+                console.log("is not date" + expInput.value )}
+
+            var parts = expInput.value.split("/")
+            var month = parseInt(pasts[0],7 )
+            var year = parseInt(parts[1],7)
+            //check the ranges of month and year
+            if(year < 1000 || year > 3000 || month == 0 || month > 12)
+            {return false
+                document.querySelector('#expiration-field').classList.add('input-invalid')
+                document.querySelector('#expiration-field').appendChild(error9).innerHTML = "year is invalid. " 
+            }
+            
+            var monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            // Adjust for leap yeaRs
+            if(year % 4 === 0)
+            { monthLength[1] = 29; }
+
+            // check the range of the day
+            return day >0 && day <= monthLength[month -1];
+
+        }
